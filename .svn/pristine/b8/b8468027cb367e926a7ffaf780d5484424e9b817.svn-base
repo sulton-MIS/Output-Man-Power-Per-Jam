@@ -1,0 +1,41 @@
+###setting database
+[DATABASE]
+TYPE=MAIN DATABASE
+RTJN=Data Source=192.168.0.3;Connection Timeout=1000;Initial Catalog=RTJN_PRD;User Id=sa;Password=tpics;Integrated Security=false
+TPICS=Data Source=192.168.0.4;Connection Timeout=1000;Initial Catalog=TxDTIPRD;User Id=sa;Password=tpics;Integrated Security=false
+ADDONS=Data Source=192.168.0.10;Connection Timeout=1000;Initial Catalog=TxDTIPRD;User Id=sa;Password=tpics;Integrated Security=false
+
+;TYPE=TESTING DATABASE
+;TPICS=Data Source=192.168.0.4;Initial Catalog=TxDTIPRD_TEST;User Id=sa;Password=tpics;Integrated Security=false
+;RTJN=Data Source=192.168.0.4;Initial Catalog=RTJN_DEV;User Id=sa;Password=tpics;Integrated Security=false
+
+;TYPE=LOCAL DATABASE
+;TPICS=Data Source=localhost;Initial Catalog=TxDTIPRD;User Id=sa;Password=tpics;Integrated Security=false
+;RTJN=Data Source=localhost;Initial Catalog=RTJN_PRD;User Id=sa;Password=tpics;Integrated Security=false
+
+###setting email server
+[EMAIL]
+email_from_alias = DoNotReply@dmcti.co.id
+email_nama = donotreply@dmcti.co.id
+email_password = iTem!@2018
+email_server_smtp = smtp.office365.com
+email_server_port = 587
+subject_email = Realtime OPMJ
+tls = 3072
+
+###Lokasi File Ekspor
+[FILE]
+nama_folder_log_error = C:\LogErrorAddonProgram
+nama_file_txt_log_error = log_error_app_opmj
+nama_file_template = template_opmj
+nama_file_lampiran_email = opmj
+lokasi_simpan_file = \\192.168.0.10\txsv\_Reports\OPMJ
+
+###Monitoring Mail Sender Loss Amount
+[MONITORING]
+nama_file_template_monitoring = template_monitoring_opmj
+nama_file_lampiran_email_monitoring = monitoring_opmj
+lokasi_simpan_file_monitoring = \\192.168.0.10\txsv\_Reports\OPMJ\Monitoring_opmj
+subject_email_monitoring = Monitoring Mail Sender OPMJ
+email_monitoring_mail_sender = 'ikbal@dmcti.co.id','halim@dmcti.co.id','sulton@dmcti.co.id'
+;email_monitoring_mail_sender = 'sulton@dmcti.co.id'
